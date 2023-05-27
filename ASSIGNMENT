@@ -1,0 +1,53 @@
+#Finding the percentage
+if __name__ == '__main__':
+    n = int(input())
+    student_marks = {}
+    for _ in range(n):
+        name, *line = input().split()
+        scores = list(map(float, line))
+        student_marks[name] = scores
+    query_name = input()
+output = list(student_marks[query_name])    
+per = sum(output)/len(output);
+print("%.2f" % per); 
+
+#String Split and Join
+def split_and_join(line):
+    a = line.split(" ")
+    a = "-".join(a)
+    return a
+
+line = input()
+result = split_and_join(line)
+print(result)
+
+
+#Set .intersection()
+N1 = int(input())
+storage1 = set(input().split())
+
+N2 = int(input())
+storage2 = set(input().split())
+
+storage3 = storage2.intersection(storage1)
+
+print(len(storage3))
+
+#Find the Runner-Up Score
+if __name__ == '__main__':
+    n = int(input())
+    arr = map(int, input().split())
+
+    print(sorted(set(arr), reverse=True)[1])
+  
+ #sWAP cASE
+ def swap_case(s):
+    ans = list(s)
+    for i in range(len(ans)):
+        if ans[i].islower(): ans[i] = ans[i].upper()
+        elif ans[i].isupper(): ans[i] = ans[i].lower()  
+    return "".join(ans) 
+if __name__ == '__main__':
+    s = input()
+    result = swap_case(s)
+    print(result)
